@@ -1,0 +1,901 @@
+{
+ "game_list": [
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "无双剑姬",
+    "name": "Fiora",
+    "title": "菲奥娜",
+    "id": 114
+   },
+   "created": "2017-07-22T07:53:38",
+   "game_type": {
+    "const": 1,
+    "name_cn": "自定义"
+   },
+   "champion_id": 114,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1124560986,
+   "spells_in_s": "",
+   "game_type_const": 1,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "蒸汽机器人",
+    "name": "Blitzcrank",
+    "title": "布里茨",
+    "id": 53
+   },
+   "created": "2017-07-22T07:33:55",
+   "game_type": {
+    "const": 1,
+    "name_cn": "自定义"
+   },
+   "champion_id": 53,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1124597216,
+   "spells_in_s": "",
+   "game_type_const": 1,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "无极剑圣",
+    "name": "MasterYi",
+    "title": "易",
+    "id": 11
+   },
+   "created": "2017-07-22T07:11:53",
+   "game_type": {
+    "const": 1,
+    "name_cn": "自定义"
+   },
+   "champion_id": 11,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1124578388,
+   "spells_in_s": "",
+   "game_type_const": 1,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "猩红收割者",
+    "name": "Vladimir",
+    "title": "弗拉基米尔",
+    "id": 8
+   },
+   "created": "2017-07-22T06:17:58",
+   "game_type": {
+    "const": 1,
+    "name_cn": "自定义"
+   },
+   "champion_id": 8,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1124538303,
+   "spells_in_s": "",
+   "game_type_const": 1,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "风暴之怒",
+    "name": "Janna",
+    "title": "迦娜",
+    "id": 40
+   },
+   "created": "2017-06-30T12:10:16",
+   "game_type": {
+    "const": 3,
+    "name_cn": "匹配赛"
+   },
+   "champion_id": 40,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1114608840,
+   "spells_in_s": "",
+   "game_type_const": 3,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "狂暴之心",
+    "name": "Kennen",
+    "title": "凯南",
+    "id": 85
+   },
+   "created": "2017-06-27T12:17:12",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 85,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1113500346,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "魔蛇之拥",
+    "name": "Cassiopeia",
+    "title": "卡西奥佩娅",
+    "id": 69
+   },
+   "created": "2017-06-21T16:06:16",
+   "game_type": {
+    "const": 4,
+    "name_cn": "单双排"
+   },
+   "champion_id": 69,
+   "flag_mvp_carry": 1,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1110930552,
+   "spells_in_s": "",
+   "game_type_const": 4,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "狂暴之心",
+    "name": "Kennen",
+    "title": "凯南",
+    "id": 85
+   },
+   "created": "2017-06-20T09:25:24",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 85,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1110584146,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "蛮族之王",
+    "name": "Tryndamere",
+    "title": "泰达米尔",
+    "id": 23
+   },
+   "created": "2017-06-20T08:02:53",
+   "game_type": {
+    "const": 6,
+    "name_cn": "大乱斗"
+   },
+   "champion_id": 23,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1110510108,
+   "spells_in_s": "",
+   "game_type_const": 6,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "策士统领",
+    "name": "Swain",
+    "title": "斯维因",
+    "id": 50
+   },
+   "created": "2017-06-20T07:35:47",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 50,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1110451187,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "堕落天使",
+    "name": "Morgana",
+    "title": "莫甘娜",
+    "id": 25
+   },
+   "created": "2017-06-10T10:07:29",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 25,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1105799447,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "虚空先知",
+    "name": "Malzahar",
+    "title": "玛尔扎哈",
+    "id": 90
+   },
+   "created": "2017-06-06T06:51:50",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 90,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1104097228,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "祖安狂人",
+    "name": "DrMundo",
+    "title": "蒙多医生",
+    "id": 36
+   },
+   "created": "2017-06-05T18:07:04",
+   "game_type": {
+    "const": 3,
+    "name_cn": "匹配赛"
+   },
+   "champion_id": 36,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1103748958,
+   "spells_in_s": "",
+   "game_type_const": 3,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "策士统领",
+    "name": "Swain",
+    "title": "斯维因",
+    "id": 50
+   },
+   "created": "2017-06-03T08:34:57",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 50,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1102471380,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "暗黑元首",
+    "name": "Syndra",
+    "title": "辛德拉",
+    "id": 134
+   },
+   "created": "2017-05-31T15:36:38",
+   "game_type": {
+    "const": 3,
+    "name_cn": "匹配赛"
+   },
+   "champion_id": 134,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1101463459,
+   "spells_in_s": "",
+   "game_type_const": 3,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "暴走萝莉",
+    "name": "Jinx",
+    "title": "金克丝",
+    "id": 222
+   },
+   "created": "2017-05-30T13:32:46",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 222,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1101085579,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "暗黑元首",
+    "name": "Syndra",
+    "title": "辛德拉",
+    "id": 134
+   },
+   "created": "2017-05-30T12:59:41",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 134,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1101113640,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "狂暴之心",
+    "name": "Kennen",
+    "title": "凯南",
+    "id": 85
+   },
+   "created": "2017-05-30T06:46:13",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 85,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1100879381,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "迅捷斥候",
+    "name": "Teemo",
+    "title": "提莫",
+    "id": 17
+   },
+   "created": "2017-05-29T17:50:07",
+   "game_type": {
+    "const": 4,
+    "name_cn": "单双排"
+   },
+   "champion_id": 17,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1100797180,
+   "spells_in_s": "",
+   "game_type_const": 4,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "暗黑元首",
+    "name": "Syndra",
+    "title": "辛德拉",
+    "id": 134
+   },
+   "created": "2017-05-29T14:47:56",
+   "game_type": {
+    "const": 3,
+    "name_cn": "匹配赛"
+   },
+   "champion_id": 134,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1100711158,
+   "spells_in_s": "",
+   "game_type_const": 3,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "无极剑圣",
+    "name": "MasterYi",
+    "title": "易",
+    "id": 11
+   },
+   "created": "2017-05-29T12:43:06",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 11,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1100625926,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "盲僧",
+    "name": "LeeSin",
+    "title": "李青",
+    "id": 64
+   },
+   "created": "2017-05-29T11:52:29",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 64,
+   "flag_mvp_carry": 1,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1100664153,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "战争女神",
+    "name": "Sivir",
+    "title": "希维尔",
+    "id": 15
+   },
+   "created": "2017-05-28T14:23:08",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 15,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1099986872,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "暗夜猎手",
+    "name": "Vayne",
+    "title": "薇恩",
+    "id": 67
+   },
+   "created": "2017-05-28T13:35:54",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 67,
+   "flag_mvp_carry": 1,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1099973975,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "麦林炮手",
+    "name": "Tristana",
+    "title": "崔丝塔娜",
+    "id": 18
+   },
+   "created": "2017-05-28T12:58:11",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 18,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1099952936,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "无极剑圣",
+    "name": "MasterYi",
+    "title": "易",
+    "id": 11
+   },
+   "created": "2017-05-25T16:32:57",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 11,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1098659146,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": true
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "虚空先知",
+    "name": "Malzahar",
+    "title": "玛尔扎哈",
+    "id": 90
+   },
+   "created": "2017-05-25T15:53:50",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 90,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1098668288,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "狂暴之心",
+    "name": "Kennen",
+    "title": "凯南",
+    "id": 85
+   },
+   "created": "2017-05-25T10:05:11",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 85,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1098568461,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "魂锁典狱长",
+    "name": "Thresh",
+    "title": "锤石",
+    "id": 412
+   },
+   "created": "2017-05-14T07:26:45",
+   "game_type": {
+    "const": 1,
+    "name_cn": "自定义"
+   },
+   "champion_id": 412,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1093905426,
+   "spells_in_s": "",
+   "game_type_const": 1,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "狂暴之心",
+    "name": "Kennen",
+    "title": "凯南",
+    "id": 85
+   },
+   "created": "2017-04-30T13:25:00",
+   "game_type": {
+    "const": 3,
+    "name_cn": "匹配赛"
+   },
+   "champion_id": 85,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1087742622,
+   "spells_in_s": "",
+   "game_type_const": 3,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "法外狂徒",
+    "name": "Graves",
+    "title": "格雷福斯",
+    "id": 104
+   },
+   "created": "2017-04-27T02:27:34",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 104,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1086062217,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  },
+  {
+   "user_id": 4006716018,
+   "champion": {
+    "display_name": "虚空之眼",
+    "name": "Velkoz",
+    "title": "维克兹",
+    "id": 161
+   },
+   "created": "2017-04-26T15:03:17",
+   "game_type": {
+    "const": 5,
+    "name_cn": "灵活组排"
+   },
+   "champion_id": 161,
+   "flag_mvp_carry": 0,
+   "collect": false,
+   "game_zone": {
+    "pinyin": "dx7",
+    "area_id": 10,
+    "server_name": "电信七",
+    "alias": "巨神峰"
+   },
+   "collected": false,
+   "game_id": 1085915502,
+   "spells_in_s": "",
+   "game_type_const": 5,
+   "battle_result": false
+  }
+ ],
+ "is_myself": false
+}
