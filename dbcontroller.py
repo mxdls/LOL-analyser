@@ -21,6 +21,21 @@ class User(Base):
     r = Column(Integer)
 
 
+class Hero(Base):
+    __tablename__ = 'hero'
+    heroid = Column(Integer, primary_key=True)
+    displayname = Column(String(20))
+    name = Column(String(20))
+    title = Column(String(20))
+
+
+class Battle(Base):
+    __tablename__ = 'battle'
+    battleid = Column(String(20), primary_key=True)
+    type = Column(Integer)
+    time = Column(String(20))
+
+
 # 初始化数库连接:
 engine = create_engine(mySQLConfig)
 # 创建DBSession类型:
