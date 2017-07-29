@@ -2,17 +2,8 @@
 import requests, json
 from get_url import *
 from dbcontroller import *
+from tool import *
 
-
-def res_to_dic(r):
-    j = json.loads(r.text)
-    return j
-
-
-def output_r(r):
-    j = json.dumps(res_to_dic(r), indent=1, ensure_ascii=False)
-    print(j)
-    return
 
 
 class user(object):
@@ -49,7 +40,7 @@ class user(object):
                     self.userid = x["user_id"]
                     break
 
-    def insert_to_db(self, out=False):
+    def insert_to_db(self):
         insert_user(self)
 
     def update_detail_info(self):
@@ -62,7 +53,7 @@ class user(object):
         #print("Updated user:",self.name)
 
 
-aa = user()
-aa.find_user_by_name('525B丶小婶婶')
-aa.update_detail_info()
-aa.insert_to_db()
+if __name__ == "__main__":
+    aa = user()
+    aa.find_user_by_name('525B丶小婶婶')
+    aa.update_detail_info()
