@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, create_engine, Integer
+from sqlalchemy import Column, String, create_engine, Integer, Float
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -34,6 +34,19 @@ class Battle(Base):
     battleid = Column(String(20), primary_key=True)
     type = Column(Integer)
     time = Column(String(20))
+
+
+class BattleDetail(Base):
+    __tablename__ = 'battledetail'
+    battleId = Column(String(20), primary_key=True)
+    userId = Column(String(20), primary_key=True)
+    win = Column(Integer)
+    heroId = Column(Integer)
+    mvp = Column(Integer)
+    K = Column(Integer)
+    D = Column(Integer)
+    A = Column(Integer)
+    score = Column(Float)
 
 
 # 初始化数库连接:
