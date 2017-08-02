@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50709
 File Encoding         : 65001
 
-Date: 2017-07-26 11:47:36
+Date: 2017-08-02 00:40:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `battle`;
 CREATE TABLE `battle` (
   `battleId` varchar(20) NOT NULL,
   `type` int(11) DEFAULT NULL,
-  `time` varchar(255) DEFAULT NULL,
+  `time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`battleId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
@@ -33,8 +33,14 @@ DROP TABLE IF EXISTS `battledetail`;
 CREATE TABLE `battledetail` (
   `battleId` varchar(20) NOT NULL,
   `userId` varchar(20) NOT NULL,
+  `zonepy` varchar(20) DEFAULT NULL,
   `win` int(11) DEFAULT NULL,
   `heroId` int(11) DEFAULT NULL,
+  `mvp` int(11) DEFAULT NULL,
+  `K` int(11) DEFAULT NULL,
+  `D` int(11) DEFAULT NULL,
+  `A` int(11) DEFAULT NULL,
+  `score` float DEFAULT NULL,
   PRIMARY KEY (`battleId`,`userId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 

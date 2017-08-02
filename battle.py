@@ -48,5 +48,5 @@ class battle(object):
 
 if __name__ == "__main__":
     b = battlelist()
-    b.update_list()
+    b.update_list(1)
     b.insert_battles()
