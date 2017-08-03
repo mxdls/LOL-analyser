@@ -39,6 +39,7 @@ class Hero(Base):
 class Battle(Base):
     __tablename__ = 'battle'
     battleId = Column(String(20), primary_key=True)
+    zonepy = Column(String(20))
     type = Column(Integer)
     time = Column(String(20))
     # details = relationship("BattleDetail",backref="battle")
@@ -85,6 +86,7 @@ def insert_hero(hero_dic):
     session.close()
     return True
 
+
 def query_and_insert_user(userid, zonepy):
     session = DBSession()
     if (len(session.query(User).filter(User.userId == userid, User.zonepy == zonepy).all()) != 0):
@@ -100,7 +102,7 @@ def query_and_insert_user(userid, zonepy):
 
 def insert_battle(battle):
     session = DBSession()
-    new_battle = Battle(battleId=battle.battleid, type=battle.type,
+    new_battle = Battle(battleId=battle.battleid, zonepy=battle.zonepy, type=battle.type,
                         time=battle.detail["player_game_list"][0]["start_timestamp"])
     session.add(new_battle)
     for x in battle.detail["player_game_list"][0]["team_lose"]["player_champions"]:
