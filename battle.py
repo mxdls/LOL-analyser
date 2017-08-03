@@ -11,7 +11,7 @@ class battlelist(object):
         self.zonepy = zonepy
         self.battleid_list = []
         self.battle_list = []
-        if (user != None):
+        if (user != None):  # 如果传入了user对象
             self.userid = user.userid
             self.zonepy = user.zonepy
 
@@ -43,7 +43,6 @@ class battle(object):
             json.dump(r.text, json_file, ensure_ascii=False)
         self.detail = res_to_dic(r)
         r.close()
-        print(self.battleid)
 
 
 if __name__ == "__main__":

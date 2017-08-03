@@ -1,6 +1,7 @@
 from sqlalchemy import Column, String, create_engine, Integer, Float
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql.expression import func
 from user import *
 
 # 连接信息
@@ -84,7 +85,6 @@ def insert_hero(hero_dic):
     session.close()
     return True
 
-
 def query_and_insert_user(userid, zonepy):
     session = DBSession()
     if (len(session.query(User).filter(User.userId == userid, User.zonepy == zonepy).all()) != 0):
@@ -130,3 +130,9 @@ def insert_battle(battle):
     print("插入 Battle%s 成功" % battle.battleid)
     session.close()
     return True
+
+
+def get_n_players(zonepy, n):
+    session = DBSession()
+    users = session.query(User).filter(User.zonepy == zonepy).order_by(func.random()).limit(n).all()
+    return users
