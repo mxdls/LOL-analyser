@@ -2,6 +2,7 @@ from sqlalchemy import Column, String, create_engine, Integer, Float
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.expression import func
+from sqlalchemy.pool import NullPool
 from user import *
 
 # 连接信息
@@ -10,7 +11,7 @@ mySQLConfig = 'mysql+pymysql://root@localhost:3306/lol?charset=utf8mb4'
 Base = declarative_base()
 
 # 初始化数库连接:
-engine = create_engine(mySQLConfig)
+engine = create_engine(mySQLConfig,pool_size=100)
 # 创建DBSession类型:
 DBSession = sessionmaker(bind=engine)
 
@@ -137,4 +138,5 @@ def insert_battle(battle):
 def get_n_players(zonepy, n):
     session = DBSession()
     users = session.query(User).filter(User.zonepy == zonepy).order_by(func.random()).limit(n).all()
+    session.close()
     return users

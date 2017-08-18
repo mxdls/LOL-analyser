@@ -38,7 +38,9 @@ class battle(object):
         self.battleid = battleid
         self.type = type
         r = requests.get(get_battle_detail_url(self.zonepy, self.userid, self.battleid))
-        with open("./battle_details/%s.json" % (str(self.zonepy) + "-" + str(self.battleid)), 'w',
+        #将战斗的json文件存放到硬盘目录
+        with open("F:/MachineLearning/LOLdata/%s.json" % (str(self.zonepy) + "-" + str(self.battleid)), 'w',
+        # with open("./battle_details/%s.json" % (str(self.zonepy) + "-" + str(self.battleid)), 'w',
                   encoding='utf-8') as json_file:
             json.dump(r.text, json_file, ensure_ascii=False)
         self.detail = res_to_dic(r)

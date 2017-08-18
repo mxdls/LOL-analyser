@@ -1,7 +1,6 @@
 from battle import *
 from dbcontroller import *
 import threading
-from time import sleep
 
 
 # 在选定服务器选区n个用户读取最近32场比赛插入数据库
@@ -28,4 +27,5 @@ def m_thread(zonepy, n):
 
 if __name__ == "__main__":
     # get_nplayers_battle("dx7", 1)
-    m_thread('dx7', 5)
+    for _ in range(5000):
+        m_thread('dx7', 10)
