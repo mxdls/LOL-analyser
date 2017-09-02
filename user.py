@@ -5,7 +5,6 @@ from dbcontroller import *
 from tool import *
 
 
-
 class user(object):
     # 默认小婶婶
     def __init__(self, userid='4006716018', zonepy='dx7', level=30, username='525B丶小婶婶'):
@@ -45,15 +44,21 @@ class user(object):
 
     def update_detail_info(self):
         r = requests.get(get_detail_by_user_id_url(self.zonepy, self.userid))
-        j = res_to_dic(r)
+        try:
+            j = res_to_dic(r)
+        except:
+            print("未找到该用户：%s %s" % (self.zonepy, self.userid))
+
         self.level = j["player_list"][0]["level"]
         self.t = j["player_list"][0]["formatted_ranked_history"]["s7"]["t"]
         self.r = j["player_list"][0]["formatted_ranked_history"]["s7"]["r"]
         self.name = j["player_list"][0]["pn"]
-        #print("Updated user:",self.name)
+        # print("Updated user:",self.name)
 
 
 if __name__ == "__main__":
     aa = user()
-    aa.find_user_by_name('525B丶小婶婶')
+    aa.find_user_by_name('525B丶小科科')
     aa.update_detail_info()
+    aa.insert_to_db()
+    print(aa.userid)

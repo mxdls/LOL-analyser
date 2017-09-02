@@ -95,7 +95,10 @@ def query_and_insert_user(userid, zonepy):
         return False
     else:
         new_user = user(userid=userid, zonepy=zonepy)
-        new_user.update_detail_info()
+        try:
+            new_user.update_detail_info()
+        except:
+            return False
         insert_user(new_user)
         session.close()
         return True
@@ -140,3 +143,9 @@ def get_n_players(zonepy, n):
     users = session.query(User).filter(User.zonepy == zonepy).order_by(func.random()).limit(n).all()
     session.close()
     return users
+
+
+if __name__ == "__main__":
+    users = get_n_players('dx7', 10)
+    for x in users:
+        print(x.userId)

@@ -20,14 +20,24 @@ class battlelist(object):
         j = res_to_dic(r)
         for x in j["game_list"]:
             self.battleid_list.append(x["game_id"])
-            b = battle(self.zonepy, self.userid, x["game_id"], x["game_type"]["const"])
+            # 查询有误的战局不加入队列
+            try:
+                b = battle(self.zonepy, self.userid, x["game_id"], x["game_type"]["const"])
+            except:
+                n -= 1
+                if (n == 0): break
+                continue
             self.battle_list.append(b)
             n -= 1
             if (n == 0): break
 
     def insert_battles(self):
         for x in self.battle_list:
-            insert_battle(x)
+            try:
+                insert_battle(x)
+            except:
+                print("战局查询错误：%s %s" % (x.zonepy, x.battleid))
+                return
         print("插入完毕")
 
 
@@ -43,7 +53,10 @@ class battle(object):
         # with open("./battle_details/%s.json" % (str(self.zonepy) + "-" + str(self.battleid)), 'w',
                   encoding='utf-8') as json_file:
             json.dump(r.text, json_file, ensure_ascii=False)
-        self.detail = res_to_dic(r)
+        try:
+            self.detail = res_to_dic(r)
+        except:
+            print("请求错误：%s %s %s" % (self.zonepy, self.userid, self.battleid))
         r.close()
 
 
