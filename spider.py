@@ -16,7 +16,7 @@ def get_nplayers_battle(zonepy, n):
 def m_thread(zonepy, n):
     threads = []
     for _ in range(n):
-        t = threading.Thread(target=get_nplayers_battle, args=(zonepy, 100))
+        t = threading.Thread(target=get_nplayers_battle, args=(zonepy, 5))
         threads.append(t)
     for t in threads:
         t.setDaemon(True)
@@ -27,5 +27,5 @@ def m_thread(zonepy, n):
 
 if __name__ == "__main__":
     # get_nplayers_battle("dx7", 1)
-    for _ in range(5000):
-        m_thread('dx7', 10)
+    for _ in range(10000):
+        m_thread('dx7', 3)

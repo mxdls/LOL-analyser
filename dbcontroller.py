@@ -1,9 +1,11 @@
-from sqlalchemy import Column, String, create_engine, Integer, Float
+from sqlalchemy import Column, String, create_engine, Integer, Float, and_, or_
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.expression import func
 from sqlalchemy.pool import NullPool
 from user import *
+import global_count
+import sys
 
 # 连接信息
 mySQLConfig = 'mysql+pymysql://root@localhost:3306/lol?charset=utf8mb4'
@@ -11,7 +13,7 @@ mySQLConfig = 'mysql+pymysql://root@localhost:3306/lol?charset=utf8mb4'
 Base = declarative_base()
 
 # 初始化数库连接:
-engine = create_engine(mySQLConfig,pool_size=100)
+engine = create_engine(mySQLConfig, pool_size=100)
 # 创建DBSession类型:
 DBSession = sessionmaker(bind=engine)
 
@@ -130,10 +132,13 @@ def insert_battle(battle):
     try:
         session.commit()
     except:
-        print("Battle%s 已存在" % battle.battleid)
+        global_count.battle_exist += 1
+        print("Battle%s 已存在 %s/%s" % (
+            battle.battleid, global_count.battle_exist, global_count.battle_exist + global_count.battle_insert))
         session.close()
         return False
     print("插入 Battle%s 成功" % battle.battleid)
+    global_count.battle_insert += 1
     session.close()
     return True
 
@@ -145,7 +150,21 @@ def get_n_players(zonepy, n):
     return users
 
 
+def get_all_battls(zonepy):
+    session = DBSession()
+    # 只查询匹配、排位
+    battles = session.query(Battle).filter(and_(Battle.type.in_([3, 4, 5]), Battle.zonepy == zonepy)).all()
+    session.close()
+    return battles
+
+
+def get_batlle_detail(battle):
+    session = DBSession()
+    details = session.query(BattleDetail).filter(
+        and_(BattleDetail.zonepy == battle.zonepy, BattleDetail.battleId == battle.battleId)).all()
+    session.close()
+    return details
+
+
 if __name__ == "__main__":
-    users = get_n_players('dx7', 10)
-    for x in users:
-        print(x.userId)
+    print(get_batlle_detail(get_all_battls('dx7')[0]))

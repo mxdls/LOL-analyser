@@ -3,7 +3,6 @@ from get_url import *
 from tool import *
 from dbcontroller import *
 
-
 # 游戏种类:1 自定义 2人机？ 3匹配赛 4单双排 5灵活组排 6大乱斗
 class battlelist(object):
     def __init__(self, userid='4006716018', zonepy='dx7', user=None):
