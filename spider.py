@@ -8,7 +8,7 @@ def get_nplayers_battle(zonepy, n):
     users = get_n_players(zonepy, n)
     for x in users:
         bl = battlelist(userid=x.userId, zonepy=x.zonepy)
-        bl.update_list()
+        bl.update_list(-1, True)
         bl.insert_battles()
 
 

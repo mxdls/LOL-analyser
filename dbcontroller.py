@@ -150,10 +150,13 @@ def get_n_players(zonepy, n):
     return users
 
 
-def get_all_battls(zonepy):
+def get_all_battls(zonepy, ranked_only=True):
     session = DBSession()
     # 只查询匹配、排位
-    battles = session.query(Battle).filter(and_(Battle.type.in_([3, 4, 5]), Battle.zonepy == zonepy)).all()
+    if (ranked_only):
+        battles = session.query(Battle).filter(and_(Battle.type.in_([4, 5]), Battle.zonepy == zonepy)).all()
+    else:
+        battles = session.query(Battle).filter(Battle.zonepy == zonepy).all()
     session.close()
     return battles
 
@@ -167,4 +170,4 @@ def get_batlle_detail(battle):
 
 
 if __name__ == "__main__":
-    print(get_batlle_detail(get_all_battls('dx7')[0]))
+    print(get_batlle_detail(get_all_battls('dx7', True)[0]))

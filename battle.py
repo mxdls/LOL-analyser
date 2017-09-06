@@ -14,14 +14,18 @@ class battlelist(object):
             self.userid = user.userid
             self.zonepy = user.zonepy
 
-    def update_list(self, n=-1):
+    def update_list(self, n=-1, onlyRankedGame=False):
+        # onlyRankedGame表示只查询排位
         r = requests.get(get_battle_list_url(self.zonepy, self.userid))
         j = res_to_dic(r)
         for x in j["game_list"]:
             self.battleid_list.append(x["game_id"])
             # 查询有误的战局不加入队列
             try:
-                b = battle(self.zonepy, self.userid, x["game_id"], x["game_type"]["const"])
+                if not (not (x["game_type"]["const"] in [4, 5]) and onlyRankedGame):
+                    b = battle(self.zonepy, self.userid, x["game_id"], x["game_type"]["const"])
+                else:
+                    continue
             except:
                 n -= 1
                 if (n == 0): break
