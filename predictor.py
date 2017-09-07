@@ -11,18 +11,16 @@ import os.path
 
 
 def load_data(path, zonepy):
-    xtr = fromfile("F:/MachineLearning/LOL_train/dx7-xtr.bin", dtype=int32)
-    ytr = fromfile("F:/MachineLearning/LOL_train/dx7-ytr.bin", dtype=int32)
-    xte = fromfile("F:/MachineLearning/LOL_train/dx7-xte.bin", dtype=int32)
-    yte = fromfile("F:/MachineLearning/LOL_train/dx7-yte.bin", dtype=int32)
+    xtr = fromfile(path + zonepy + "-xtr.bin", dtype=int32)
+    ytr = fromfile(path + zonepy + "-ytr.bin", dtype=int32)
+    xte = fromfile(path + zonepy + "-xte.bin", dtype=int32)
+    yte = fromfile(path + zonepy + "-yte.bin", dtype=int32)
     xtr = np_utils.to_categorical(xtr, 1000)
     ytr = np_utils.to_categorical(ytr, 2)
     xte = np_utils.to_categorical(xte, 1000)
     yte = np_utils.to_categorical(yte, 2)
     xtr.shape = (len(xtr) // 10, 10, 1000)
     xte.shape = (len(xte) // 10, 10, 1000)
-    # ytr.shape = (len(ytr), 2, 1)
-    # yte.shape = (len(yte), 2, 1)
     return xtr, ytr, xte, yte
 
 
@@ -30,7 +28,7 @@ def train(xtr, ytr, xte, yte):
     model = Sequential()
     model.add(Flatten(input_shape=(10, 1000)))
     model.add(Dense(2048, activation='tanh'))
-    model.add(Dropout(0.95))
+    model.add(Dropout(0.75))
     model.add(Dense(2, activation='softmax'))
 
     model.compile(loss='categorical_crossentropy',

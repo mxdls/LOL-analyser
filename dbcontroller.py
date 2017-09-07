@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.expression import func
 from sqlalchemy.pool import NullPool
 from user import *
-import global_count
+import global_var
 import sys
 
 # 连接信息
@@ -117,7 +117,8 @@ def insert_battle(battle):
                                          heroId=x["champion"]["id"],
                                          mvp=x["flag_mvp_carry"], K=x["total_killed"], D=x["total_death"],
                                          A=x["total_assist"], score=x["evaluate_in_game"])
-        query_and_insert_user(userid=x["player"]["user_id"], zonepy=x["game_zone"]["pinyin"])
+        if global_var.add_new_users:
+            query_and_insert_user(userid=x["player"]["user_id"], zonepy=x["game_zone"]["pinyin"])
         session.add(new_battle_detail)
         insert_hero(x["champion"])
     for x in battle.detail["player_game_list"][0]["team_win"]["player_champions"]:
@@ -126,19 +127,20 @@ def insert_battle(battle):
                                          heroId=x["champion"]["id"],
                                          mvp=x["flag_mvp_carry"], K=x["total_killed"], D=x["total_death"],
                                          A=x["total_assist"], score=x["evaluate_in_game"])
-        query_and_insert_user(userid=x["player"]["user_id"], zonepy=x["game_zone"]["pinyin"])
+        if global_var.add_new_users:
+            query_and_insert_user(userid=x["player"]["user_id"], zonepy=x["game_zone"]["pinyin"])
         session.add(new_battle_detail)
         insert_hero(x["champion"])
     try:
         session.commit()
     except:
-        global_count.battle_exist += 1
+        global_var.battle_exist += 1
         print("Battle%s 已存在 %s/%s" % (
-            battle.battleid, global_count.battle_exist, global_count.battle_exist + global_count.battle_insert))
+            battle.battleid, global_var.battle_exist, global_var.battle_exist + global_var.battle_insert))
         session.close()
         return False
     print("插入 Battle%s 成功" % battle.battleid)
-    global_count.battle_insert += 1
+    global_var.battle_insert += 1
     session.close()
     return True
 
