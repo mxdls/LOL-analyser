@@ -37,6 +37,7 @@ class Hero(Base):
     displayName = Column(String(20))
     name = Column(String(20))
     title = Column(String(20))
+    myId = Column(Integer)
 
 
 class Battle(Base):
@@ -120,7 +121,8 @@ def insert_battle(battle):
         if global_var.add_new_users:
             query_and_insert_user(userid=x["player"]["user_id"], zonepy=x["game_zone"]["pinyin"])
         session.add(new_battle_detail)
-        insert_hero(x["champion"])
+        if global_var.add_new_heros:
+            insert_hero(x["champion"])
     for x in battle.detail["player_game_list"][0]["team_win"]["player_champions"]:
         new_battle_detail = BattleDetail(battleId=battle.battleid, zonepy=x["game_zone"]["pinyin"],
                                          userId=x["player"]["user_id"], win=1,
@@ -130,7 +132,8 @@ def insert_battle(battle):
         if global_var.add_new_users:
             query_and_insert_user(userid=x["player"]["user_id"], zonepy=x["game_zone"]["pinyin"])
         session.add(new_battle_detail)
-        insert_hero(x["champion"])
+        if global_var.add_new_heros:
+            insert_hero(x["champion"])
     try:
         session.commit()
     except:
@@ -138,6 +141,11 @@ def insert_battle(battle):
         print("Battle%s 已存在 %s/%s" % (
             battle.battleid, global_var.battle_exist, global_var.battle_exist + global_var.battle_insert))
         session.close()
+        # 自动判断是否插入新用户
+        if global_var.battle_exist / (global_var.battle_exist + global_var.battle_insert) > 0.5:
+            global_var.add_new_users = True
+        if global_var.battle_exist / (global_var.battle_exist + global_var.battle_insert) < 0.4:
+            global_var.add_new_users = False
         return False
     print("插入 Battle%s 成功" % battle.battleid)
     global_var.battle_insert += 1
@@ -163,6 +171,11 @@ def get_all_battls(zonepy, ranked_only=True):
     return battles
 
 
+def get_all_heros():
+    session = DBSession()
+    heros = session.query(Hero).order_by('heroId').all()
+    return heros
+
 def get_batlle_detail(battle):
     session = DBSession()
     details = session.query(BattleDetail).filter(
@@ -171,5 +184,16 @@ def get_batlle_detail(battle):
     return details
 
 
+def add_myid_to_heros():
+    session = DBSession()
+    heros = session.query(Hero).order_by('heroId').all()
+    count = 0
+    for _ in heros:
+        heros[count].myId = count
+        count += 1
+    session.commit()
+    session.close()
+
+
 if __name__ == "__main__":
-    print(get_batlle_detail(get_all_battls('dx7', True)[0]))
+    add_myid_to_heros()

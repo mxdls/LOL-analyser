@@ -4,3 +4,5 @@ battle_insert = 0
 battle_exist = 0
 # 是否插入新用户
 add_new_users = False
+# 是否插入新英雄
+add_new_heros = False
